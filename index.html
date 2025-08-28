@@ -15,7 +15,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #e0e0e0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
             min-height: 100vh;
         }
 
@@ -28,20 +28,21 @@
         .hero {
             text-align: center;
             padding: 60px 0;
-            background: rgba(20, 25, 40, 0.95);
+            background: rgba(13, 17, 23, 0.95);
             border-radius: 20px;
             margin-bottom: 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            border: 1px solid rgba(100, 120, 180, 0.3);
+            border: 1px solid rgba(57, 255, 20, 0.3);
         }
 
         .hero h1 {
             font-size: 3em;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, #64b5f6, #42a5f5, #2196f3);
+            background: linear-gradient(45deg, #39ff14, #00ff88, #39ff14);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
         }
 
         .hero p {
@@ -68,20 +69,21 @@
         }
 
         .contact-info a {
-            color: #64b5f6;
+            color: #39ff14;
             text-decoration: none;
             padding: 10px 20px;
-            border: 2px solid #64b5f6;
+            border: 2px solid #39ff14;
             border-radius: 25px;
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .contact-info a:hover {
-            background: #64b5f6;
-            color: #1a1a2e;
+            background: #39ff14;
+            color: #0d1117;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(100, 181, 246, 0.4);
+            box-shadow: 0 5px 15px rgba(57, 255, 20, 0.6);
+            text-shadow: none;
         }
 
         .contact-info .contact-text {
@@ -94,19 +96,20 @@
         }
 
         .section {
-            background: rgba(25, 30, 45, 0.95);
+            background: rgba(22, 27, 34, 0.95);
             margin: 30px 0;
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid rgba(100, 120, 180, 0.2);
+            border: 1px solid rgba(57, 255, 20, 0.2);
         }
 
         .section h2 {
-            color: #64b5f6;
+            color: #39ff14;
             font-size: 2.2em;
             margin-bottom: 30px;
             text-align: center;
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
         }
 
         .projects-grid {
@@ -117,23 +120,23 @@
         }
 
         .project-card {
-            background: rgba(30, 35, 50, 0.9);
+            background: rgba(33, 38, 45, 0.9);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(100, 120, 180, 0.2);
+            border: 1px solid rgba(57, 255, 20, 0.2);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-            border-color: rgba(100, 181, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(57, 255, 20, 0.3);
+            border-color: rgba(57, 255, 20, 0.5);
         }
 
         .project-header {
-            background: linear-gradient(45deg, #2196f3, #1976d2, #0d47a1);
-            color: white;
+            background: linear-gradient(45deg, #00ff88, #39ff14, #00cc66);
+            color: #0d1117;
             padding: 20px;
             text-align: center;
         }
@@ -141,6 +144,7 @@
         .project-header h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .project-content {
@@ -160,12 +164,12 @@
         }
 
         .tech-tag {
-            background: rgba(100, 181, 246, 0.2);
-            color: #64b5f6;
+            background: rgba(57, 255, 20, 0.2);
+            color: #39ff14;
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.9em;
-            border: 1px solid rgba(100, 181, 246, 0.3);
+            border: 1px solid rgba(57, 255, 20, 0.3);
         }
 
         .project-links {
@@ -178,24 +182,26 @@
             flex: 1;
             text-align: center;
             padding: 12px;
-            background: #2196f3;
-            color: white;
+            background: #00ff88;
+            color: #0d1117;
             text-decoration: none;
             border-radius: 8px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: bold;
         }
 
         .project-links a:hover {
-            background: #1976d2;
-            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+            background: #39ff14;
+            box-shadow: 0 5px 15px rgba(57, 255, 20, 0.4);
         }
 
         .project-links a.demo {
-            background: #e74c3c;
+            background: #ff0040;
+            color: white;
         }
 
         .project-links a.demo:hover {
-            background: #c0392b;
+            background: #cc0033;
         }
 
         .skills-grid {
@@ -205,15 +211,15 @@
         }
 
         .skill-category {
-            background: rgba(30, 35, 50, 0.8);
+            background: rgba(33, 38, 45, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            border: 1px solid rgba(100, 120, 180, 0.2);
+            border: 1px solid rgba(57, 255, 20, 0.2);
         }
 
         .skill-category h3 {
-            color: #64b5f6;
+            color: #39ff14;
             margin-bottom: 15px;
         }
 
@@ -406,7 +412,7 @@
                     with particular interests in VR development and artificial intelligence.
                 </p>
                 <p style="font-size: 1.1em; color: #b0b0b0;">
-                    <strong style="color: #64b5f6;">Currently seeking internship or employment opportunities</strong> in software development where I can apply and deepen my technical expertise 
+                    <strong style="color: #39ff14;">Currently seeking internship or employment opportunities</strong> in software development where I can apply and deepen my technical expertise 
                     while working on exciting projects.
                 </p>
             </div>
@@ -416,8 +422,8 @@
         <div class="section">
             <h2>💼 Experience</h2>
             <div style="max-width: 700px; margin: 0 auto;">
-                <div style="background: rgba(30, 35, 50, 0.8); padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 1px solid rgba(100, 120, 180, 0.2);">
-                    <h3 style="color: #64b5f6; margin-bottom: 10px;">Technical Documentation Specialist</h3>
+                <div style="background: rgba(33, 38, 45, 0.8); padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 1px solid rgba(57, 255, 20, 0.2);">
+                    <h3 style="color: #39ff14; margin-bottom: 10px;">Technical Documentation Specialist</h3>
                     <p style="color: #90a4ae; margin-bottom: 10px;"><strong>Metos Oy</strong> | 2023 - Present (Part-time)</p>
                     <p style="color: #c0c0c0;">Product manual documentation alongside studies, ensuring technical accuracy and user-friendly content.</p>
                 </div>
