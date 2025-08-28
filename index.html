@@ -18,6 +18,7 @@
             background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
             min-height: 100vh;
             position: relative;
+            background-attachment: fixed;
         }
 
         body::before {
@@ -26,7 +27,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 120%;
             background: 
                 repeating-linear-gradient(
                     90deg,
@@ -34,10 +35,45 @@
                     transparent 2px,
                     rgba(57, 255, 20, 0.01) 2px,
                     rgba(57, 255, 20, 0.01) 4px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 100px,
+                    rgba(57, 255, 20, 0.008) 100px,
+                    rgba(57, 255, 20, 0.008) 101px
                 );
             pointer-events: none;
             z-index: 1;
             animation: matrix-rain 20s linear infinite;
+            will-change: transform;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 80%, rgba(57, 255, 20, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.02) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(57, 255, 20, 0.01) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+            animation: parallax-bg 30s ease-in-out infinite;
+        }
+
+        @keyframes parallax-bg {
+            0%, 100% {
+                transform: translateX(0) translateY(0) rotate(0deg);
+            }
+            33% {
+                transform: translateX(-20px) translateY(-10px) rotate(0.5deg);
+            }
+            66% {
+                transform: translateX(20px) translateY(-20px) rotate(-0.5deg);
+            }
         }
 
         @keyframes matrix-rain {
@@ -414,6 +450,29 @@
             
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* Disable parallax on mobile for better performance */
+            body {
+                background-attachment: scroll;
+            }
+            
+            body::before,
+            body::after {
+                animation: none;
+            }
+        }
+
+        /* Smooth scrolling for parallax effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add subtle parallax to main sections when scrolling */
+        @media (min-width: 769px) {
+            .parallax-slow {
+                transform: translateZ(0);
+                will-change: transform;
             }
         }
     </style>
