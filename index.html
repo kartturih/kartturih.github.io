@@ -322,22 +322,6 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(57, 255, 20, 0.3);
             border-color: rgba(57, 255, 20, 0.5);
-            animation: scan-lines 2s infinite;
-        }
-
-        @keyframes scan-lines {
-            0% {
-                background-size: 100% 2px;
-                background-image: linear-gradient(90deg, transparent 50%, rgba(57, 255, 20, 0.1) 50%);
-            }
-            50% {
-                background-size: 100% 4px;
-                background-image: linear-gradient(90deg, transparent 50%, rgba(57, 255, 20, 0.2) 50%);
-            }
-            100% {
-                background-size: 100% 2px;
-                background-image: linear-gradient(90deg, transparent 50%, rgba(57, 255, 20, 0.1) 50%);
-            }
         }
 
         .project-header {
@@ -463,7 +447,31 @@
             }
         }
 
-        /* Smooth scrolling for parallax effect */
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #39ff14, #00ff88, #39ff14);
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.3);
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.8));
+            filter: blur(2px);
+        }
+
+        /* Smooth scrolling for better progress tracking */
         html {
             scroll-behavior: smooth;
         }
@@ -478,6 +486,9 @@
     </style>
 </head>
 <body>
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
     <div class="container">
         <!-- Hero Section -->
         <div class="hero fade-in">
@@ -487,25 +498,25 @@
             
             <div class="contact-info fade-in-delay-3">
                 <div class="contact-row">
-                    <a href="https://www.linkedin.com/in/arttu-vihervuori/" target="_blank">💼 LinkedIn</a>
-                    <a href="https://github.com/kartturih" target="_blank">💻 GitHub</a>
+                    <a href="https://www.linkedin.com/in/arttu-vihervuori/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/kartturih" target="_blank">GitHub</a>
                 </div>
                 <div class="contact-row">
-                    <span class="contact-text">📧 arttu.vihervuori@outlook.com</span>
-                    <span class="contact-text">📱 +358 40 353 9883</span>
+                    <span class="contact-text">arttu.vihervuori@outlook.com</span>
+                    <span class="contact-text">+358 40 353 9883</span>
                 </div>
             </div>
         </div>
 
         <!-- Projects Section -->
         <div class="section fade-in-delay-1">
-            <h2>🚀 Featured Projects</h2>
+            <h2>Featured Projects</h2>
             <div class="projects-grid">
                 
                 <!-- VR Gunrange -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>🥽 VR Gunrange</h3>
+                        <h3>VR Gunrange</h3>
                         <p>Virtual Reality Shooting Range</p>
                     </div>
                     <div class="project-content">
@@ -520,7 +531,7 @@
                         
                         <div class="project-links">
                             <a href="https://github.com/kartturih/VR_gunrange" target="_blank">GitHub</a>
-                            <a href="https://youtu.be/EPrb9Z0E9HA" class="demo" target="_blank">🎥 Demo</a>
+                            <a href="https://youtu.be/EPrb9Z0E9HA" class="demo" target="_blank">Demo</a>
                         </div>
                     </div>
                 </div>
@@ -528,7 +539,7 @@
                 <!-- AI Practical Work -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>🤖 AI Practical Work</h3>
+                        <h3>AI Practical Work</h3>
                         <p>Machine Learning Applications</p>
                     </div>
                     <div class="project-content">
@@ -550,7 +561,7 @@
                 <!-- Game Engine -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>⚙️ KAMK 2D Engine</h3>
+                        <h3>KAMK 2D Engine</h3>
                         <p>Custom 2D Game Engine</p>
                     </div>
                     <div class="project-content">
@@ -572,7 +583,7 @@
                 <!-- Coop Network Game -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>🌐 Cooperative Network Game</h3>
+                        <h3>Cooperative Network Game</h3>
                         <p>Multiplayer C++ Game</p>
                     </div>
                     <div class="project-content">
@@ -587,7 +598,7 @@
                         
                         <div class="project-links">
                             <a href="https://github.com/kartturih/coop_verkkopeli" target="_blank">GitHub</a>
-                            <a href="https://youtu.be/5OXqbHb9G5A" class="demo" target="_blank">🎥 Demo</a>
+                            <a href="https://youtu.be/5OXqbHb9G5A" class="demo" target="_blank">Demo</a>
                         </div>
                     </div>
                 </div>
@@ -597,7 +608,7 @@
 
         <!-- Skills Section -->
         <div class="section fade-in-delay-2">
-            <h2>🛠️ Technical Skills</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category fade-in-delay-1">
                     <h3>Programming Languages</h3>
@@ -633,7 +644,7 @@
 
         <!-- About Section -->
         <div class="section fade-in-delay-3">
-            <h2>👨‍💻 About Me</h2>
+            <h2>About Me</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
                 <p style="font-size: 1.2em; color: #b0b0b0; margin-bottom: 20px;" class="fade-in-delay-1">
                     I am a final-year Information and Communications Technology Engineering student at Kajaani University of Applied Sciences, 
@@ -649,7 +660,7 @@
 
         <!-- Experience Section -->
         <div class="section fade-in-delay-4">
-            <h2>💼 Experience</h2>
+            <h2>Experience</h2>
             <div style="max-width: 700px; margin: 0 auto;">
                 <div style="background: rgba(33, 38, 45, 0.8); padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 1px solid rgba(57, 255, 20, 0.2);" class="fade-in-delay-1">
                     <h3 style="color: #39ff14; margin-bottom: 10px;">Technical Documentation Specialist</h3>
@@ -659,5 +670,27 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Progress bar functionality
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        });
+
+        // Add subtle glow effect to progress bar when scrolling
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            const progressBar = document.getElementById("progressBar");
+            progressBar.style.boxShadow = "0 0 15px rgba(57, 255, 20, 0.8), 0 0 30px rgba(57, 255, 20, 0.4)";
+            
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                progressBar.style.boxShadow = "0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.3)";
+            }, 150);
+        });
+    </script>
 </body>
 </html>
