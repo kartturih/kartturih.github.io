@@ -56,6 +56,15 @@
             gap: 30px;
             flex-wrap: wrap;
             margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
         .contact-info a {
@@ -65,6 +74,7 @@
             border: 2px solid #64b5f6;
             border-radius: 25px;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .contact-info a:hover {
@@ -72,6 +82,15 @@
             color: #1a1a2e;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(100, 181, 246, 0.4);
+        }
+
+        .contact-info .contact-text {
+            color: #b0b0b0;
+            padding: 8px 16px;
+            background: none;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
         }
 
         .section {
@@ -232,10 +251,14 @@
             <p>Specializing in Software Development and Game Technology</p>
             
             <div class="contact-info">
-                <a href="mailto:arttu.vihervuori@outlook.com">📧 Email</a>
-                <a href="https://www.linkedin.com/in/arttu-vihervuori/" target="_blank">💼 LinkedIn</a>
-                <a href="https://github.com/kartturih" target="_blank">💻 GitHub</a>
-                <a href="tel:+358403539883">📱 +358 40 353 9883</a>
+                <div class="contact-row">
+                    <a href="https://www.linkedin.com/in/arttu-vihervuori/" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/kartturih" target="_blank">💻 GitHub</a>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-text">📧 arttu.vihervuori@outlook.com</span>
+                    <span class="contact-text">📱 +358 40 353 9883</span>
+                </div>
             </div>
         </div>
 
@@ -370,35 +393,33 @@
                         <li>Technical Documentation</li>
                     </ul>
                 </div>
-                
-                    </ul>
-                </div>
             </div>
         </div>
 
         <!-- About Section -->
         <div class="section">
             <h2>👨‍💻 About Me</h2>
-            <p style="text-align: center; font-size: 1.2em; color: #b0b0b0; max-width: 800px; margin: 0 auto;">
-                I am a 4th-year Information and Communications Technology Engineering student at Kajaani University of Applied Sciences, 
-                specializing in software development and game technology. I'm passionate about creating innovative solutions and learning new technologies, 
-                with particular interests in VR development and artificial intelligence.
-            </p>
-            <br>
-            <p style="text-align: center; font-size: 1.1em; color: #b0b0b0;">
-                <strong style="color: #64b5f6;">Currently seeking internship or employment opportunities</strong> in software development where I can apply and deepen my technical expertise 
-                while working on exciting projects.
-            </p>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2em; color: #b0b0b0; margin-bottom: 20px;">
+                    I am a final-year Information and Communications Technology Engineering student at Kajaani University of Applied Sciences, 
+                    specializing in software development and game technology. I'm passionate about creating innovative solutions and learning new technologies, 
+                    with particular interests in VR development and artificial intelligence.
+                </p>
+                <p style="font-size: 1.1em; color: #b0b0b0;">
+                    <strong style="color: #64b5f6;">Currently seeking internship or employment opportunities</strong> in software development where I can apply and deepen my technical expertise 
+                    while working on exciting projects.
+                </p>
+            </div>
         </div>
 
         <!-- Experience Section -->
         <div class="section">
             <h2>💼 Experience</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
+            <div style="max-width: 700px; margin: 0 auto;">
                 <div style="background: rgba(30, 35, 50, 0.8); padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 1px solid rgba(100, 120, 180, 0.2);">
                     <h3 style="color: #64b5f6; margin-bottom: 10px;">Technical Documentation Specialist</h3>
                     <p style="color: #90a4ae; margin-bottom: 10px;"><strong>Metos Oy</strong> | 2023 - Present (Part-time)</p>
-                    <p style="color: #c0c0c0;">Product manual documentation alongside studies, ensuring technical accuracy and user-friendly content.</p>    
+                    <p style="color: #c0c0c0;">Product manual documentation alongside studies, ensuring technical accuracy and user-friendly content.</p>
                 </div>
             </div>
         </div>
